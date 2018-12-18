@@ -3,5 +3,12 @@
 @import "~ngx-toastr/toastr.css";
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

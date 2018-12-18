@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  constructor() { }
+  public now: number;
+  constructor() {
+    this.now = Date.now();
+  }
+  public Logout() {
+   // TODO
+  }
 }

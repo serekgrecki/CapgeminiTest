@@ -6,12 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
-  private _userName: string;
-  get userName(): string {
-    return this._userName;
+  navbarOpen = false;
+  constructor() {}
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
-
-  constructor() { }
 
 }
