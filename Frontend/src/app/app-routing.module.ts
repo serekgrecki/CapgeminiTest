@@ -6,8 +6,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'login',
-    loadChildren: './component/login/login.module#LoginModule',
-    canActivate: [LoginGuard]
+    loadChildren: './component/login/login.module#LoginModule'
   },
   {
     path: 'customer',

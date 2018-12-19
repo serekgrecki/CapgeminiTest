@@ -1,3 +1,35 @@
-<p>
-  customer-modal works!
-</p>
+<h1 *ngIf="customer.Id>0" mat-dialog-title>Update {{customer.FullName}}</h1>
+<h1 *ngIf="customer.Id==0" mat-dialog-title>New customer</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="FirstName" required [(ngModel)]="customer.FirstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="LastName" required [(ngModel)]="customer.LastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Address1" required [(ngModel)]="customer.Address1">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Address2" [(ngModel)]="customer.Address2">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="City" required [(ngModel)]="customer.City">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="ZIP" required [(ngModel)]="customer.ZIP" type="number">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="State" required [(ngModel)]="customer.State">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Date Of Birth" (dateChange)="addEvent('change', $event)"  [value]="customer.DateOfBirth">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Exit</button>
+  <button *ngIf="customer.Id>0" mat-button (click)="Update()">Update</button>
+  <button *ngIf="customer.Id==0" mat-button (click)="Create()">Create</button>
+</div>

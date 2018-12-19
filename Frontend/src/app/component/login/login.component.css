@@ -1,0 +1,8 @@
+#loginForm {
+  height: 70vh;
+}
+#loginForm>div>div {
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5)!important;
+}

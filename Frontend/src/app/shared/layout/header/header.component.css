@@ -9,3 +9,6 @@ a {
 .navbar-light .navbar-toggler {
   border-color: rgb(0, 0, 0);
 }
+nav {
+  box-shadow: 0 2px 4px rgba(0,0,0,.5)!important;
+}

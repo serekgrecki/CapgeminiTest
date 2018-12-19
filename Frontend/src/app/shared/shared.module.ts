@@ -6,6 +6,14 @@ import { ToastrModule } from 'ngx-toastr';
 import {
   MatInputModule,
   MatProgressBarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatTableModule,
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 @NgModule({
@@ -13,24 +21,40 @@ import {
     CommonModule,
     MatInputModule,
     MatProgressBarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     ToastrModule.forRoot()
   ],
   declarations: [
     DateFormUSAPipe,
+  ],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
   ],
   exports: [
     CommonModule,
     DateFormUSAPipe,
     MatInputModule,
     MatProgressBarModule,
-    ToastrModule
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ToastrModule,
     ]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: []
+      providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}]
     };
   }
 }

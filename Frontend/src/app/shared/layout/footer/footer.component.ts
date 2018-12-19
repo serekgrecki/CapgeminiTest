@@ -10,7 +10,4 @@ export class FooterComponent {
   constructor() {
     this.now = Date.now();
   }
-  public Logout() {
-   // TODO
-  }
 }
