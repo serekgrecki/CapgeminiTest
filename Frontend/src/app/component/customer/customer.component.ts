@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { CustomerService } from "src/app/core/services/customer.service";
-import { SubscriptionManagerService } from "src/app/core/helpers/subscription-manager.service";
-import { GlobalDataService } from "src/app/core/services/global.service";
-import { Customer } from "src/app/core/models/customer";
-import { ToastrService } from "ngx-toastr";
-import { MatDialog } from "@angular/material";
-import { CustomerModalComponent } from "src/app/modals/customer-modal/customer-modal.component";
+import { Component, OnInit } from '@angular/core';
+import { CustomerService } from 'src/app/core/services/customer.service';
+import { SubscriptionManagerService } from 'src/app/core/helpers/subscription-manager.service';
+import { GlobalDataService } from 'src/app/core/services/global.service';
+import { Customer } from 'src/app/core/models/customer';
+import { ToastrService } from 'ngx-toastr';
+import { MatDialog } from '@angular/material';
+import { CustomerModalComponent } from 'src/app/modals/customer-modal/customer-modal.component';
 
 @Component({
-  selector: "app-customer",
-  templateUrl: "./customer.component.html",
-  styleUrls: ["./customer.component.css"],
+  selector: 'app-customer',
+  templateUrl: './customer.component.html',
+  styleUrls: ['./customer.component.css'],
   providers: [SubscriptionManagerService, CustomerService]
 })
 export class CustomerComponent implements OnInit {
